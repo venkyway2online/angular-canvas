@@ -1,13 +1,14 @@
 {
   "MySql":{
-    "sqlHost": "localhost",
-    "sqlUserName": "root",
-    "sqlPassWord": "root",
+    "sqlHost": "172.16.20.182",
+    "sqlUserName": "myuser",
+    "sqlPassWord": "mypass",
     "sqlDataBase": "mysql",
     "sqlTableUsers":"login_user",
     "sqlTableTokens":"access_table"
   },
   "api":{
+    "host":"172.16.20.182",
     "port":"1235"
   }
 }
