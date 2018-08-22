@@ -1,0 +1,35 @@
+
+
+<div>
+    <canvas id="canvas" width="800" height="600" style="border:1px solid #000000"></canvas>
+
+    <br>
+    <br>
+    <form name="logoTypeForm" novalidate>
+        upload images to canvas:  <input type="file" multiple name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+    </form>
+
+    <br>
+    <a id="download" download="myImage.png" href="" onclick="angular.element(this).scope().download(this)">Download your canvas</a>
+
+    <input type="button" id="btnSave" name="btnSave" onclick="angular.element(this).scope().save()" value="save canvas" />
+    <button ng-click="showImages()">saved images</button>
+    <div ng-show="show_image==true" >
+        <label ng-repeat="imagesName in imagesNames" >
+            {{$index+1  +"  "  +imagesName}}
+
+            <a href="{{ '/images/'+client_folder+'/'+ imagesName}}" download>
+                <img ng-if="imagesName!=null" src="{{ '/images/'+client_folder+'/'+ imagesName}}" alt="No Image Found" width="600" height="800" download>
+            </a>
+        </label>
+    </div>
+
+
+</div>
+
+
+
+
+
+

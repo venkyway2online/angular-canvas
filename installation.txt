@@ -1,0 +1,53 @@
+installations:
+
+    database installations:
+        1.install mysql in your computer.
+
+    database configuration:
+        1.configure your database credentials in properties/conf.json file.
+        2.make sure that your mentioned database must exist in mysql.
+        3.must create two tables mentioned in the conf file.
+
+    tables schema:
+        1.CREATE TABLE sqlTableUsers (
+                id INT(6) UNSIGNED NOT NULL,
+                email VARCHAR(30) NOT NULL PRIMARY KEY,
+                password VARCHAR(30) NOT NULL,
+                status INT(1) UNSIGNED NOT NULL,
+                img_id INT(6) UNSIGNED NOT NULL
+         );
+        2.CREATE TABLE sqlTableTokens (
+                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                email VARCHAR(30) NOT NULL,
+                token VARCHAR(30) NOT NULL
+         );
+         //replace the table names with values given to those variable respectively.
+
+    install required node_modules:
+        1.run "npm install" in main directory. //it will install all required node_modules which are already mentioned in package.json
+
+    api_configuration:
+        1.set port value on which you want to run your application in conf file.
+        //make it sure that no other application run in that port.
+        //ex:"1234"
+
+    application running:
+        1.first enter into angular-project directory then open terminal in that directory.
+            //cd angular-project
+        2.run your app with "node bin/www"
+            //on successful running it will show
+            //server running on ::  "port value given in conf"
+            //connected to Mysqldb
+    application usage instructions:
+        1.open your app in web browser by http://localhost:port
+        2.first register a user with email and password.
+        3.login with those credentials.
+        4.after login upload images to canvas. //for now png images only
+        5.for download client side click on "Download your canvas".
+        6.for save the image into later use click on "save canvas".
+        7.for view your saved images click on "saved images".
+        8.click on logout button to close your session.
+        //try this with a different user.
+
+
+

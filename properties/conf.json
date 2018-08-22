@@ -1,0 +1,13 @@
+{
+  "MySql":{
+    "sqlHost": "localhost",
+    "sqlUserName": "root",
+    "sqlPassWord": "root",
+    "sqlDataBase": "mysql",
+    "sqlTableUsers":"login_user",
+    "sqlTableTokens":"access_table"
+  },
+  "api":{
+    "port":"1235"
+  }
+}
