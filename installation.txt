@@ -42,7 +42,7 @@ installations:
         1.open your app in web browser by http://localhost:port
         2.first register a user with email and password.
         3.login with those credentials.
-        4.after login upload images to canvas. //for now png images only
+        4.after login upload images to canvas.
         5.for download client side click on "Download your canvas".
         6.for save the image into later use click on "save canvas".
         7.for view your saved images click on "saved images".
